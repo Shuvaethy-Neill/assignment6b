@@ -21,12 +21,22 @@ public class Player
 
 	public int GetSumOfAllDealtCards() {
 		int sumOfDealtCardValues = 0;
+		boolean seenAce = false;
 		for (int i = 0; i < dealtCards.length; i++) {
 			if (dealtCards[i] == null) {
 				continue;
 			}
+
+			//if you get an Ace, seenAce becomes true
+			if (dealtCards[i].name.charAt(0) == 'A' && seenAce == false) {
+				seenAce = true;
+			}
 			//add all dealt card values
-			sumOfDealtCardValues += dealtCards[i].value;
+			sumOfDealtCardValues += dealtCards[i].value;	
+		}
+		//decides whether or not Ace should be 1 or 11
+		if (sumOfDealtCardValues <= 11 && seenAce == true) {
+			sumOfDealtCardValues = sumOfDealtCardValues + 10;
 		}
 
 		//return sum
