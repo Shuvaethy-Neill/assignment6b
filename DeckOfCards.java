@@ -7,8 +7,7 @@
 
 import java.util.Random;
 
-public class DeckOfCards
-{
+public class DeckOfCards{
 	//all suits
 	String[] suit = { "Hearts", "Diamonds", "Spades", "Clubs" };
 
