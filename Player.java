@@ -27,14 +27,13 @@ public class Player
 				continue;
 			}
 
-			//if you get an Ace, seenAce becomes true
 			if (dealtCards[i].name.charAt(0) == 'A' && seenAce == false) {
 				seenAce = true;
 			}
 			//add all dealt card values
 			sumOfDealtCardValues += dealtCards[i].value;	
 		}
-		//decides whether or not Ace should be 1 or 11
+
 		if (sumOfDealtCardValues <= 11 && seenAce == true) {
 			sumOfDealtCardValues = sumOfDealtCardValues + 10;
 		}
@@ -43,7 +42,7 @@ public class Player
 		return sumOfDealtCardValues;
 	}
 
-	public String playerType;
+	//public String playerType;
 	public Card[] dealtCards = new Card[3];
 
 	//shows cards dealt
