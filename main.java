@@ -35,6 +35,7 @@ public class main{
 
 		//print out user cards
 		System.out.println("User Cards:\n" + user + "\n");
+		System.out.println("Shown Computer " + newCardToDeal1 + " and one face down card.");
 
 		//ask if user wants another card
 		System.out.println("Do you want another card?");
@@ -43,11 +44,11 @@ public class main{
 		Scanner inputScanner = new Scanner(System.in);
 		userInput = inputScanner.next();
 
-		Card thridCardForUser;
+		Card thirdCardForUser;
 		//if user says yes, generate their third card
 		if (userInput.equalsIgnoreCase("Yes")) {
-			thridCardForUser = newDeck.GetACard();
-			user.DealThirdCard(thridCardForUser);
+			thirdCardForUser = newDeck.GetACard();
+			user.DealThirdCard(thirdCardForUser);
 			//print user's cards
 			System.out.println(user);
 		}
