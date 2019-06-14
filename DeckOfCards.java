@@ -21,8 +21,7 @@ public class DeckOfCards{
 	public Card[] deckOfCards = new Card[52];
 
 	//create the deck of cards (all possible cards)
-	public DeckOfCards()
-	{
+	public DeckOfCards(){
 		for (int i = 0; i < deckOfCards.length; i++) {
 
 			//uses mondulus (remainder), goes up to 51
