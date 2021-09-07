@@ -1,1 +1,1 @@
-# assignment6b
+Blackjack game in Java and Python
